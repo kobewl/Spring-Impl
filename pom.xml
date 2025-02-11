@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.wangliang.Spring-Impl</groupId>
-    <artifactId>Spring-Impl</artifactId>
+    <groupId>com.wangliang</groupId>
+    <artifactId>spring-impl</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -14,21 +14,27 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <!-- https://mvnrepository.com/artifact/org.reflections/reflections -->
-            <dependency>
-                <groupId>org.reflections</groupId>
-                <artifactId>reflections</artifactId>
-                <version>0.9.12</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context</artifactId>
-                <version>6.0.2</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
+    <dependencies>
+        <!-- Reflections 库 -->
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.10.2</version>
+        </dependency>
+        
+        <!-- 用于日志输出 -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.11</version>
+        </dependency>
+        
+        <!-- 用于单元测试 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>
